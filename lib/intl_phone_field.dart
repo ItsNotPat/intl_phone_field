@@ -1,7 +1,7 @@
 library intl_phone_field;
 
 import 'dart:async';
-import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
@@ -272,7 +272,7 @@ class IntlPhoneField extends StatefulWidget {
     this.enabled = true,
     this.keyboardAppearance,
     @Deprecated('Use searchFieldInputDecoration of PickerDialogStyle instead')
-    this.searchText = 'Search country',
+        this.searchText = 'Search country',
     this.dropdownIconPosition = IconPosition.leading,
     this.dropdownIcon = const Icon(Icons.arrow_drop_down),
     this.autofocus = false,
@@ -470,20 +470,20 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                   widget.dropdownIcon,
                   const SizedBox(width: 4),
                 ],
-                if (widget.showCountryFlag) ...[
-                  // kIsWeb
-                  //     ?
-                  Image.asset(
-                    'assets/flags/${_selectedCountry.code.toLowerCase()}.png',
-                    package: 'intl_phone_field',
-                    width: 25,
-                  ),
-                  // : Text(
-                  //   _selectedCountry.flag,
-                  //   style: const TextStyle(fontSize: 18),
-                  // ),
-                  const SizedBox(width: 8),
-                ],
+                // if (widget.showCountryFlag) ...[
+                //   // kIsWeb
+                //   //     ?
+                //   Image.asset(
+                //     'assets/flags/${_selectedCountry.code.toLowerCase()}.png',
+                //     package: 'intl_phone_field',
+                //     width: 25,
+                //   ),
+                //   // : Text(
+                //   //   _selectedCountry.flag,
+                //   //   style: const TextStyle(fontSize: 18),
+                //   // ),
+                //   const SizedBox(width: 8),
+                // ],
                 FittedBox(
                   child: Text(
                     '+${_selectedCountry.dialCode}',
